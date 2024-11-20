@@ -24,49 +24,49 @@ As **stopwords** são palavras que não agregam muito valor semântico ao texto,
 
 ---
 
-# Aula 4 - Limpeza de Dados Textuais
+## Aula 4 - Limpeza de Dados Textuais
 
-## 4.1 Normalização de Texto e Remoção de Ruído
+### 4.1 Normalização de Texto e Remoção de Ruído
 Nessa etapa trata-se de limpar o texto, removendo caracteres especiais, pontuações e normalizando o uso de maiúsculas e minúsculas. O código utiliza expressões regulares (`r'[^A-Za-zÀ-ÿ\s]'`) para substituir todos os caracteres que não sejam letras ou espaços por uma string vazia. Em seguida, o texto é convertido para minúsculas (`.lower()`) para garantir uniformidade.
  
-## 4.2 Tokenização
+### 4.2 Tokenização
 No código, o **NLTK** é utilizado para dividir o texto em palavras com a função `word_tokenize()`. Depois é calculado o número total de tokens com `len()`.
 
-## 4.3 Remoção de StopWords
+### 4.3 Remoção de StopWords
 Um conjunto de stopwords em português é carregado com `stopwords.words('portuguese')`, depois o texto tokenizado é filtrado para remover essas palavras, por fim é mostrado o número de tokens após a remoção das stopwords.
 
-## 4.4 Stemming e Lematização
+### 4.4 Stemming e Lematização
 - **Stemming** reduz as palavras às suas raízes.
 - **Lematização** normaliza as palavras para suas formas base, levando em conta o contexto e a gramática.
 No código o **RSLPStemmer** é usado para realizar o stemming em português. Depois, as palavras são reduzidas aos seus radicais com a função `stem()`.
 
-## 4.5 Utilizando Todo o Processo de Limpeza
+### 4.5 Utilizando Todo o Processo de Limpeza
 Neste exemplo, o processo completo de limpeza de dados textuais é realizado em um texto de exemplo. Isso inclui a limpeza do texto, tokenização, remoção de stopwords e stemming das palavras.
 
 ---
 
-# Aula 5 - Representação de Texto
+## Aula 5 - Representação de Texto
 
-## Exemplo 1 - Implementando o BoW (Bag of Words)
+### Exemplo 1 - Implementando o BoW (Bag of Words)
 O **Bag of Words (BoW)** é uma técnica de vetorização de texto que cria um modelo de vetor onde cada palavra corresponde a uma coluna da matriz, a presença ou ausência de cada palavra é indicada por valores binários. O **CountVectorizer** do **scikit-learn** é utilizado para criar a matriz BoW a partir de uma lista de documentos. Depois a função `fit_transform()` é usada para transformar o texto em uma matriz de contagens. Depois é exibida com `toarray()`.
 
-## Exemplo 2 - Implementando BoW com TF-IDF
+### Exemplo 2 - Implementando BoW com TF-IDF
 **TF-IDF** é uma variação do BoW que mostra a importância das palavras. Como o anterior, o **CountVectorizer** é usado para criar a matriz BoW, depois  o **TfidfVectorizer** é utilizado para aplicar a técnica de TF-IDF e por fim o vocabulário e as matrizes são exibidos.
 
-## Exemplo 3 - Pré-processamento Completo e Representação de Texto
+### Exemplo 3 - Pré-processamento Completo e Representação de Texto
 Esse exemplo aplica todo o processo de pré-processamento, incluindo a limpeza do texto, tokenização, remoção de stopwords e lematização e representação do texto em formato de matriz, usando BoW.
 
 ---
 
-# Aula 6 - Representação de Texto com Embeddings
+## Aula 6 - Representação de Texto com Embeddings
 
-## Exemplo 1 - Word2Vec
+### Exemplo 1 - Word2Vec
 **Word2Vec** é uma técnica de embeddings de palavras que mapeia palavras em vetores num espaço contínuo. No exemplo, o **Gensim** é utilizado para treinar um modelo sobre um corpus de frases. Depois, a similaridade entre duas palavras é calculada com `model.wv.similarity()`, que retorna um valor entre 0 e 1.
 
-## Exemplo 2 - GloVe
+### Exemplo 2 - GloVe
 **GloVe** (Global Vectors for Word Representation) é uma técnica de embeddings que se baseia em matrizes de simultaneidade de palavras.  No código, o **KeyedVectors** da é utilizado para carregar um modelo pré-treinado do GloVe. Depois, a similaridade entre palavras é calculada com o método `similarity()`. Por fim, exibe as palavras mais próximas do termo `king` com `most_similar()`.
 
-## Exemplo 3 - FastText
+### Exemplo 3 - FastText
 **FastText** é uma variação do Word2Vec, desenvolvida pelo Facebook. No código, o modelo **FastText** é carregado a partir de um arquivo, depois calcula-se a similaridade entre palavras e exibe mais próximas de `gato`.
 
 ---
