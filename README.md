@@ -84,13 +84,13 @@ Neste segundo exemplo, é realizado um processo de modelagem de tópicos utiliza
 ---
 
 ## Aula 08 - Introdução a Machine Learning para PLN
-### Exemplo 01 - Aplicação do modelo de Naive Bayes em um texto
+### Exemplo 1 - Aplicação do modelo de Naive Bayes em um texto
 Neste exemplo, é demonstrado como aplicar o modelo de Naive Bayes para classificação de sentimentos em textos. Começa com a criação de um corpus de frases rotuladas como positivas ou negativas. O processo de pré-processamento é realizado utilizando expressões regulares para limpar e normalizar o texto. Após o pré-processamento, são calculadas as probabilidades condicionais e probabilidades para cada classe (positiva ou negativa). O modelo é então treinado, e utiliza o cálculo da probabilidade de um novo texto com base nas palavras presentes, retornando a classe mais provável para o sentimento do texto.
 
-### Exemplo 02 - Classificação com Support Vector Machine (SVM)
+### Exemplo 2 - Classificação com Support Vector Machine (SVM)
 Neste exemplo, a `Support Vector Machine (SVM)` é utilizada para classificar textos em categorias de sentimentos. O corpus de exemplo contém frases rotuladas, e o modelo é treinado a partir da representação dos textos utilizando o método TF-IDF para vetorização. O código divide os dados em conjuntos de treinamento e teste e treina o modelo SVM com o kernel linear. Ao final, o modelo é avaliado com a precisão da classificação, usando a métrica de classification_report do scikit-learn.
 
-### Exemplo 03 - Comparando os classificadores: Naive Bayes vs SVM
+### Exemplo 3 - Comparando os classificadores: Naive Bayes vs SVM
 Neste exemplo, é feita a comparação entre dois algoritmos de aprendizado de máquina para a tarefa de classificação de sentimentos: `Naive Bayes` e `Support Vector Machine (SVM)`. O dataset utilizado é o corpus de críticas de filmes do `NLTK`. O código realiza o pré-processamento dos textos, aplicando técnicas como `TF-IDF` para vetorização e LabelEncoder para transformação das classes em valores numéricos. Em seguida, os modelos são treinados e avaliados em um conjunto de teste, e as performances de ambos os classificadores são comparadas usando a função `classification_report`.
 
 ---
