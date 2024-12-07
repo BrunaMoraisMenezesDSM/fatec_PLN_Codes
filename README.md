@@ -71,6 +71,18 @@ Esse exemplo aplica todo o processo de pré-processamento, incluindo a limpeza d
 
 ---
 
+## Aula 7 - Modelagem de Tópicos com Latent Dirichlet Allocation (LDA)
+### Exemplo 1 - Implementação de LDA no Corpus de Notícias
+Neste exemplo, o corpus Reuters é utilizado para realizar a modelagem de tópicos. Os dados passam por um processo de pré-processamento, que inclui a remoção de stopwords, lematização e tokenização dos textos. A partir disso, é criado um dicionário que mapeia todas as palavras do corpus, e cada documento é transformado em um conjunto de índices associados ao dicionário. O modelo LDA é treinado utilizando a biblioteca Gensim, com um número predefinido de tópicos. Após o treinamento, os tópicos extraídos são apresentados, destacando as palavras mais representativas de cada tópico e suas respectivas probabilidades.
+
+### Visualização dos Tópicos
+Para visualizar os tópicos gerados, utiliza-se o pacote `pyLDAvis`, que permite criar uma interface interativa. Essa visualização facilita a exploração dos tópicos gerados pelo modelo, mostrando a relação entre os tópicos e as palavras que os compõem.
+
+### Exemplo 2 - Aplicação de LDA em um Corpus Customizado
+Neste segundo exemplo, é realizado um processo de modelagem de tópicos utilizando um corpus customizado, criado manualmente ou carregado de um arquivo externo. O procedimento segue os mesmos passos do primeiro exemplo: o corpus é pré-processado, tokenizado, e é gerado um dicionário. Em seguida, o modelo LDA é treinado com os textos customizados, permitindo ajustar o número de tópicos de acordo com a necessidade. Após o treinamento, são exibidos os tópicos, apresentando as palavras-chave de cada tópico e probabilidades associadas.
+
+---
+
 # Instruções
 Para executar os códigos:
 1. Entrar no arquivo cuja extensão é .ipynb
